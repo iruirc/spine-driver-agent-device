@@ -1,0 +1,9 @@
+{
+  "name": "agent-device-driver",
+  "description": "Driver adapter for spine-toolkit: declares what the callstack/agent-device MCP server can drive, per surface.",
+  "version": "1.0.0",
+  "author": { "name": "Dmitry Nuzhin" },
+  "dependencies": [
+    { "name": "spine-toolkit", "version": ">=1.7.1 <2" }
+  ]
+}
