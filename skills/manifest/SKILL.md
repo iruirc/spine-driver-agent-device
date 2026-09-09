@@ -10,7 +10,7 @@ description: Driver manifest for agent-device-driver. Data, not instructions —
 
 Adapter for `agent-device` (callstack), which runs as an MCP server via `agent-device mcp`. The
 adapter does not install it — install it separately and register it with your MCP client. Written
-against 0.21.
+against v0.21.0.
 
 ## Driver
 
@@ -43,7 +43,8 @@ record_replay
 launch stop install
 ui_tree find assert screenshot video logs
 tap type swipe key
-deeplink performance
+deeplink alerts
+visual_baseline performance
 
 ## Capabilities: android-emulator
 
@@ -51,7 +52,7 @@ launch stop install reset_state
 ui_tree find assert screenshot video logs
 tap type swipe gesture key
 deeplink permissions alerts push biometrics location network_conditions
-performance
+visual_baseline performance
 record_replay
 
 ## Capabilities: android-device
@@ -60,7 +61,7 @@ launch stop install reset_state
 ui_tree find assert screenshot video logs
 tap type swipe gesture key
 deeplink permissions alerts push network_conditions
-performance
+visual_baseline performance
 record_replay
 
 ## Capabilities: macos
@@ -69,20 +70,21 @@ launch stop
 ui_tree find assert screenshot video logs
 tap type
 deeplink alerts
-performance
+visual_baseline performance
 
 ## Capabilities: linux
 
 launch stop
 ui_tree screenshot
 tap type
+visual_baseline
 
 ## Capabilities: browser
 
 launch stop
 ui_tree find assert screenshot
 tap type
-viewport
+viewport visual_baseline
 record_replay
 
 ## Procedure
