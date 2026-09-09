@@ -35,7 +35,7 @@ launch stop install reset_state
 ui_tree find assert screenshot video logs
 tap type swipe gesture key
 deeplink permissions alerts push biometrics location
-visual_baseline performance
+performance
 record_replay
 
 ## Capabilities: ios-device
@@ -44,7 +44,7 @@ launch stop install
 ui_tree find assert screenshot video logs
 tap type swipe key
 deeplink alerts
-visual_baseline performance
+performance
 
 ## Capabilities: android-emulator
 
@@ -52,7 +52,7 @@ launch stop install reset_state
 ui_tree find assert screenshot video logs
 tap type swipe gesture key
 deeplink permissions alerts push biometrics location network_conditions
-visual_baseline performance
+performance
 record_replay
 
 ## Capabilities: android-device
@@ -61,7 +61,7 @@ launch stop install reset_state
 ui_tree find assert screenshot video logs
 tap type swipe gesture key
 deeplink permissions alerts push network_conditions
-visual_baseline performance
+performance
 record_replay
 
 ## Capabilities: macos
@@ -70,21 +70,20 @@ launch stop
 ui_tree find assert screenshot video logs
 tap type
 deeplink alerts
-visual_baseline performance
+performance
 
 ## Capabilities: linux
 
 launch stop
 ui_tree screenshot
 tap type
-visual_baseline
 
 ## Capabilities: browser
 
 launch stop
 ui_tree find assert screenshot
 tap type
-viewport visual_baseline
+viewport
 record_replay
 
 ## Procedure
@@ -100,6 +99,10 @@ XCTest backend, which drives open, close, interactions, snapshots and screenshot
 logs, recording, deep links or performance sampling; a CoreDevice-backed device has all of them.
 And the modular platform packages are per-backend, so a surface this table declares may simply be
 absent from a given machine.
+
+**`diff screenshot` is not declared.** It exists in the CLI and in the command reference, but the
+MCP `diff` tool locks its `kind` field to `snapshot`, so pixel-baseline comparison is unreachable
+from this transport.
 
 Prefer the accessibility snapshot to a screenshot for reading state. Screenshots and video are
 evidence, not inspection, and the tree is an order of magnitude cheaper.
