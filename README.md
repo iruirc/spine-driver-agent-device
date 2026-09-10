@@ -1,10 +1,10 @@
-# agent-device-driver
+# spine-driver-agent-device
 
 Driver adapter for spine-toolkit: declares what the `agent-device` MCP server can drive, per surface.
 
 ## What This Is
 
-agent-device-driver is a driver plugin for [spine-toolkit](https://github.com/iruirc/spine-toolkit) that declares the capabilities of [agent-device](https://github.com/callstack/agent-device), Callstack's device-automation MCP server. The driver does not install the server — you register it separately with your MCP client.
+spine-driver-agent-device is a driver plugin for [spine-toolkit](https://github.com/iruirc/spine-toolkit) that declares the capabilities of [agent-device](https://github.com/callstack/agent-device), Callstack's device-automation MCP server. The driver does not install the server — you register it separately with your MCP client.
 
 ## Installing the MCP Server
 
@@ -33,7 +33,7 @@ In your project's `CLAUDE-spine-toolkit.md`, declare this driver in the `## Vali
 ```markdown
 ## Validation
 
-driver: agent-device-driver
+driver: spine-driver-agent-device
 ```
 
 The manifest in `skills/manifest/SKILL.md` declares which surfaces and capabilities are supported, and names the runtime check that narrows them for a given machine. See [spine-toolkit: docs/building-a-driver.md](https://github.com/iruirc/spine-toolkit/blob/main/docs/building-a-driver.md) for the driver contract and architecture.
