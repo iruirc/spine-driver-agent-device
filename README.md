@@ -28,12 +28,12 @@ Then register the stdio MCP server with your client under the key `agent-device`
 
 ## Using the Driver
 
-In your project's `CLAUDE-spine-toolkit.md`, declare this driver in the `## Validation` block:
+In your project's `CLAUDE-spine-toolkit.md`, declare this driver in the `## Task defaults` block:
 
 ```markdown
-## Validation
+## Task defaults
 
-driver: spine-driver-agent-device
+[DRIVER] = [spine-driver-agent-device]
 ```
 
 The manifest in `skills/manifest/SKILL.md` declares which surfaces and capabilities are supported, and names the runtime check that narrows them for a given machine. See [spine-toolkit: docs/building-a-driver.md](https://github.com/iruirc/spine-toolkit/blob/main/docs/building-a-driver.md) for the driver contract and architecture.
