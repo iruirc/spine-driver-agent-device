@@ -10,7 +10,7 @@ description: Driver manifest for spine-driver-agent-device. Data, not instructio
 
 Adapter for `agent-device` (callstack), which runs as an MCP server via `agent-device mcp`. The
 adapter does not install it — install it separately and register it with your MCP client. Written
-against v0.21.0.
+against v0.21.0; the `drag` rows were checked against v0.21.14.
 
 ## Driver
 
