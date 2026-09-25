@@ -33,7 +33,7 @@ browser
 
 launch stop install reset_state
 ui_tree find assert screenshot video logs
-tap type swipe gesture key
+tap type swipe gesture drag key
 deeplink permissions alerts push biometrics location
 performance
 record_replay
@@ -42,7 +42,7 @@ record_replay
 
 launch stop install
 ui_tree find assert screenshot video logs
-tap type swipe key
+tap type swipe drag key
 deeplink alerts
 performance
 
@@ -50,7 +50,7 @@ performance
 
 launch stop install reset_state
 ui_tree find assert screenshot video logs
-tap type swipe gesture key
+tap type swipe gesture drag key
 deeplink permissions alerts push biometrics location network_conditions
 performance
 record_replay
@@ -59,7 +59,7 @@ record_replay
 
 launch stop install reset_state
 ui_tree find assert screenshot video logs
-tap type swipe gesture key
+tap type swipe gesture drag key
 deeplink permissions alerts push network_conditions
 performance
 record_replay
