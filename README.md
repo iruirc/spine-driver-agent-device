@@ -28,7 +28,7 @@ Then register the stdio MCP server with your client under the key `agent-device`
 
 ## Using the Driver
 
-In your project's `CLAUDE-spine-toolkit.md`, declare this driver in the `## Task defaults` block:
+In your project config (`SPINE.md`), declare this driver in the `## Task defaults` block:
 
 ```markdown
 ## Task defaults
