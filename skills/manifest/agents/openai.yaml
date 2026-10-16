@@ -1,0 +1,5 @@
+interface:
+  display_name: "Spine Driver Agent Device Manifest"
+  short_description: "Data spine-toolkit reads to drive an app"
+policy:
+  allow_implicit_invocation: false

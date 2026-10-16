@@ -1,0 +1,27 @@
+{
+  "name": "spine-driver-agent-device",
+  "version": "1.2.0",
+  "description": "Driver adapter for spine-toolkit: declares what the callstack/agent-device MCP server can drive, per surface.",
+  "author": {
+    "name": "Dmitry Nuzhin"
+  },
+  "repository": "https://github.com/iruirc/spine-driver-agent-device",
+  "license": "MIT",
+  "keywords": [
+    "spine",
+    "driver",
+    "mobile"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Spine Driver Agent Device",
+    "shortDescription": "Driver data spine-toolkit reads to drive an app",
+    "longDescription": "Driver adapter for spine-toolkit: declares what the callstack/agent-device MCP server can drive, per surface.",
+    "developerName": "Dmitry Nuzhin",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://github.com/iruirc/spine-driver-agent-device"
+  }
+}
