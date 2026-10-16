@@ -4,27 +4,20 @@ Driver adapter for spine-toolkit: declares what the `agent-device` MCP server ca
 
 ## What This Is
 
-spine-driver-agent-device is a driver plugin for [spine-toolkit](https://github.com/iruirc/spine-toolkit) that declares the capabilities of [agent-device](https://github.com/callstack/agent-device), Callstack's device-automation MCP server. The driver does not install the server — you register it separately with your MCP client.
+spine-driver-agent-device is a driver plugin for [spine-toolkit](https://github.com/iruirc/spine-toolkit) that declares the capabilities of [agent-device](https://github.com/callstack/agent-device), Callstack's device-automation MCP server. The driver ships the server: installing the plugin registers it.
 
 ## Installing the MCP Server
 
-```bash
-npm install -g agent-device@latest
-agent-device doctor
-```
+Nothing to install by hand: the plugin's `.mcp.json` runs `agent-device@0.21.23 mcp` through `npx`
+(Node.js required), and Claude Code and Codex CLI both pick it up when the plugin is installed. The
+first start downloads the package; `npx -y agent-device@0.21.23 doctor` checks the machine. In Codex
+the server's tools are approved without a question per call; to be asked again, set
+`default_tools_approval_mode = "prompt"` under
+`[plugins."spine-driver-agent-device@<marketplace>".mcp_servers.agent-device]` in `~/.codex/config.toml`.
 
-Then register the stdio MCP server with your client under the key `agent-device`:
-
-```json
-{
-  "mcpServers": {
-    "agent-device": {
-      "command": "agent-device",
-      "args": ["mcp"]
-    }
-  }
-}
-```
+Running a build of the server of your own: in Codex, register it under the key `agent-device` in your
+configuration — it replaces the plugin's. In Claude Code a server you register yourself runs next to
+the plugin's rather than instead of it; point a copy of the plugin's `.mcp.json` at your build instead.
 
 ## Using the Driver
 
