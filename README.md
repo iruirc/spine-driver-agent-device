@@ -17,7 +17,8 @@ the server's tools are approved without a question per call; to be asked again, 
 
 Running a build of the server of your own: in Codex, register it under the key `agent-device` in your
 configuration — it replaces the plugin's. In Claude Code a server you register yourself runs next to
-the plugin's rather than instead of it; point a copy of the plugin's `.mcp.json` at your build instead.
+the plugin's rather than instead of it, unless it has the same command and arguments; point a copy of
+the plugin's `.mcp.json` at your build instead.
 
 ## Using the Driver
 
