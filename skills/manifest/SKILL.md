@@ -10,8 +10,8 @@ description: Driver manifest for spine-driver-agent-device. Data, not instructio
 
 Adapter for `agent-device` (callstack), which runs as an MCP server via `agent-device mcp`. The
 plugin ships it: its `.mcp.json` runs `agent-device@0.21.23` through `npx`, so installing the driver
-registers the server in Claude Code and in Codex. Written against v0.21.0; the `drag` rows were
-checked against v0.21.14.
+registers the server in Claude Code and in Codex. The tables were written against v0.21.0 and the
+`drag` rows checked against v0.21.14; the pin moved to 0.21.23 without a row-by-row re-check.
 
 ## Driver
 
